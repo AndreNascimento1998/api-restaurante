@@ -1,6 +1,5 @@
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 import { LanchesDTO } from "src/DTO/lanche/lanches.dto";
-import { Lanche } from "src/mongo/Interfaces/lanche/lanche.interface";
 import { BebidaRepository } from "src/mongo/Repository/bebida/bebida.repository";
 
 @Injectable()
@@ -34,7 +33,7 @@ export class BebidaService {
         }
     }
 
-    async salvaBebida(bebida: Lanche): Promise<any> {
+    async salvaBebida(bebida: LanchesDTO): Promise<any> {
         return await this.bebidaRepository.salvaBebida(bebida)
     }
 

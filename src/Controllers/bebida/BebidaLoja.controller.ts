@@ -21,7 +21,7 @@ export class BebidaLojaController {
     }
 
     @Post()
-    async salvaBebida(@Body() bebida: Lanche) : Promise<Lanche>{
+    async salvaBebida(@Body() bebida: LanchesDTO) : Promise<LanchesDTO>{
         return await this.bebidasService.salvaBebida(bebida)
     }
 

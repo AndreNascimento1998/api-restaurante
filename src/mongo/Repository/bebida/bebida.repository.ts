@@ -19,7 +19,7 @@ export class BebidaRepository {
         return await this.bebidaModel.findById(id, {__v: false})
     }
 
-    async salvaBebida(bebida: Lanche) {
+    async salvaBebida(bebida: LanchesDTO) {
         const saveBebida = new this.bebidaModel(bebida)
         return await saveBebida.save()
     }

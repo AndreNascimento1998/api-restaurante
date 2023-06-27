@@ -7,6 +7,9 @@ import { LancheSchema } from './mongo/Schema/lanche.schema';
 import { BebidaLojaController } from './Controllers/bebida/BebidaLoja.controller';
 import { BebidaService } from './Services/bebida/bebida.service';
 import { BebidaRepository } from './mongo/Repository/bebida/bebida.repository';
+import { ComboController } from './Controllers/combos/ComboLoja.controller';
+import { ComboService } from './Services/combo/combo.service';
+import { ComboRepository } from './mongo/Repository/combo/combo.repository';
 
 @Module({
     imports: [
@@ -14,13 +17,15 @@ import { BebidaRepository } from './mongo/Repository/bebida/bebida.repository';
 
         MongooseModule.forFeature([
             { name: 'lanche', schema: LancheSchema },
-            { name: 'bebida', schema: LancheSchema }
+            { name: 'bebida', schema: LancheSchema },
+            { name: 'combo', schema: LancheSchema }
         ])
     ],
 
     controllers: [
         LanchesLojaController, 
-        BebidaLojaController
+        BebidaLojaController,
+        ComboController,
     ],
 
     providers: [
@@ -28,6 +33,8 @@ import { BebidaRepository } from './mongo/Repository/bebida/bebida.repository';
         LancheRepository,
         BebidaService,
         BebidaRepository,
+        ComboService,
+        ComboRepository
     ],
 })
 export class AppModule { }
