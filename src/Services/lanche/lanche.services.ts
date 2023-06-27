@@ -1,6 +1,5 @@
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 import { LanchesDTO } from "src/DTO/lanche/lanches.dto";
-
 import { LancheRepository } from "src/mongo/Repository/lanche/lanche.repository";
 
 
@@ -26,12 +25,12 @@ export class LancheServices {
             const lanche = await this.lancheRepository.obtemLanchePorId(id)
 
             if(!lanche){
-                throw new BadRequestException(`Sem livros com id: ${id}`)
+                throw new BadRequestException(`Sem lanche com id: ${id}`)
             }
 
             return lanche
         } catch (e) { 
-                throw new NotFoundException(`Sem livros com id: ${id}`);
+                throw new NotFoundException(`Sem lanche com id: ${id}`)
         }
     }
  
@@ -43,12 +42,12 @@ export class LancheServices {
         try{
             const lanche = await this.lancheRepository.obtemLanchePorId(id)
             if(!lanche){
-                throw new BadRequestException(`Sem livros com id: ${id}`)
+                throw new BadRequestException(`Sem lanche com id: ${id}`)
             }
             
             return await this.lancheRepository.atualizaLanche(id, LancheAtualizar)
         }catch(e){
-            throw new NotFoundException(`Sem livros com id: ${id}`);
+            throw new NotFoundException(`Sem lanche com id: ${id}`)
         }
             
     }
@@ -57,7 +56,7 @@ export class LancheServices {
         try {
             return await this.lancheRepository.deletaLanche(id)
         } catch (error) {
-            throw new NotFoundException(`Sem livros com id: ${id}`)
+            throw new NotFoundException(`Sem lanche com id: ${id}`)
         }
     }
 }

@@ -29,6 +29,11 @@ export class LancheRepository {
     }
 
     async deletaLanche(id: string) {
-        return await this.lancheModel.findByIdAndDelete(id)
+        const lancheExcluido = await this.lancheModel.findByIdAndDelete(id)
+
+        if(lancheExcluido) {
+            return "Lanche excluído com sucesso!"
+        }
+        throw new Error(`Sem lanche com id: ${id}`)
     }
 }
