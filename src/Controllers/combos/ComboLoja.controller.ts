@@ -31,7 +31,7 @@ export class ComboController {
     }
 
     @Delete(':id')
-    async deletaCombo(@Param ('id') id: string): Promise<Lanche>{
+        async deletaCombo(@Param ('id') id: string): Promise<Lanche>{
         return await this.comboService.deletaCombo(id)
     }
 

@@ -27,7 +27,7 @@ export class ComboRepository {
         }
 
         throw new Error('Cadastro falhou')
-    } 
+    }
 
     async editaCombo(id: string, comboAtualiza: LanchesDTO) {
         const comboEditado = await this.comboModel.findOneAndUpdate({_id: id}, comboAtualiza, {new: true})
