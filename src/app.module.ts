@@ -22,7 +22,7 @@ import { PromocaoRepository } from './mongo/Repository/promocao/promocao.reposit
 
 @Module({
     imports: [
-        MongooseModule.forRoot('mongodb+srv://andrejoarez428:wYl6HfkkVnI3kByh@restaurante-api.pmpxvgn.mongodb.net/'),
+        MongooseModule.forRoot('mongodb+srv://andrejoarez428:wYl6HfkkVnI3kByh@restaurante-api.pmpxvgn.mongodb.net/restaurante-bff'),
 
         MongooseModule.forFeature([
             { name: 'lanche', schema: LancheSchema },
