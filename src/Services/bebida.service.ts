@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 import { LanchesDTO } from "src/DTO/lanche/lanches.dto";
-import { BebidaRepository } from "src/mongo/Repository/bebida/bebida.repository";
+import { BebidaRepository } from "src/Repository/bebida.repository"; 
 
 @Injectable()
 export class BebidaService {

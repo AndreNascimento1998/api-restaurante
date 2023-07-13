@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { LanchesDTO } from "src/DTO/lanche/lanches.dto";
-import { ComboService } from "src/Services/combo/combo.service";
-import { Lanche } from "src/mongo/Interfaces/lanche/lanche.interface";
+import { ComboService } from "src/Services/combo.service"; 
+import { Lanche } from "src/Interfaces/lanche/lanche.interface";
 
 @Controller('/combos')
 export class ComboController {

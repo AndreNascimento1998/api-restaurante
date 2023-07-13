@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { LanchesDTO } from "src/DTO/lanche/lanches.dto";
-import { Lanche } from "src/mongo/Interfaces/lanche/lanche.interface";
+import { Lanche } from "src/Interfaces/lanche/lanche.interface";
 
 @Injectable()
 export class PratoPrincipalRepository{

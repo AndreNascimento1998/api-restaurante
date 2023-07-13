@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 import { LanchesDTO } from "src/DTO/lanche/lanches.dto";
-import { ComboRepository } from "src/mongo/Repository/combo/combo.repository";
+import { ComboRepository } from "src/Repository/combo.repository"; 
 
 @Injectable()
 export class ComboService {

@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsNumber, IsPositive, MaxLength, Validate } from "class-validator"
+import { IsNotEmpty, IsNumber, IsPositive, MaxLength } from "class-validator"
 
 export class LanchesDTO {
 

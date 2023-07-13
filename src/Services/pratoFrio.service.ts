@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common"
 import { LanchesDTO } from "src/DTO/lanche/lanches.dto"
-import { PratoFrioRepository } from "src/mongo/Repository/pratoFrio/pratoFrio.repository"
+import { PratoFrioRepository } from "src/Repository/pratoFrio.repository" 
 
 @Injectable()
 export class PratoFrioService {

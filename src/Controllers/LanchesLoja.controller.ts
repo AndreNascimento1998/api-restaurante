@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { LanchesDTO } from "src/DTO/lanche/lanches.dto";
-import { LancheServices } from "src/Services/lanche/lanche.services";
-import { Lanche } from "src/mongo/Interfaces/lanche/lanche.interface";
+import { LancheServices } from "src/Services/lanche.services"; 
+import { Lanche } from "src/Interfaces/lanche/lanche.interface";
 
 
 @Controller('/lanches')

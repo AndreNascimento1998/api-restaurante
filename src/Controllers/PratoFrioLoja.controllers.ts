@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { LanchesDTO } from "src/DTO/lanche/lanches.dto";
-import { PratoFrioService } from "src/Services/pratoFrio/pratoFrio.service";
-import { Lanche } from "src/mongo/Interfaces/lanche/lanche.interface";
+import { PratoFrioService } from "src/Services/pratoFrio.service"; 
+import { Lanche } from "src/Interfaces/lanche/lanche.interface";
 
 @Controller('/prato-frio')
 export class PratoFrioLojaController {
